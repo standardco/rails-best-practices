@@ -59,4 +59,5 @@ end
 # Use devise for user authentication
 gem 'devise', '~> 3.4.1'
 
+gem "carrierwave"
 gem "jquery-fileupload-rails"
