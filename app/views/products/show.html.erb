@@ -6,16 +6,19 @@
 </p>
 <p>
   <strong>Images:</strong>
-    <div class="row">
-      <% @product.images.each do |image| %>
-        <div class="col-xs-4">
-          <%= image_tag image.image.thumb.to_s, class: "img-responsive img-thumbnail", alt: image.name %>
-          <%= link_to 'Edit', edit_image_path(image) %> |
-          <%= link_to 'Remove', image, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
-      <% end %>
-    </div>
-  <%= link_to 'Add Image', new_product_image_path(@product) %>
+  <div class="row">
+    <% @product.images.each do |image| %>
+      <div class="col-xs-4">
+        <%= image_tag image.image.thumb.to_s, class: "img-responsive img-thumbnail", alt: image.name %>
+        <%= link_to 'Edit', edit_image_path(image) %> |
+        <%= link_to 'Remove', image, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+  </div>
+  <%= form_for [@product, @product.images.new] do |f| %>
+    <%= f.label :image, 'Upload images:' %>
+    <%= f.file_field :image, multiple: true, name: "image[image]" %>
+  <% end %>
 <p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
