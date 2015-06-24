@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+  before_action :set_product, only: [:index, :create, :new]
   before_action :set_image, only: [:show, :edit, :update, :destroy]
 
   # GET /images
@@ -65,6 +66,10 @@ class ImagesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_image
       @image = Image.find(params[:id])
+    end
+    
+    def set_product
+      @product = Product.find(params[:product_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
