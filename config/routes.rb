@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  
-  resources :images
 
-  resources :products
+  resources :products do
+    resources :images, shallow: true
+  end
 
   root 'home#index'
   
