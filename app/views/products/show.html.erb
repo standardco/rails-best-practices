@@ -10,7 +10,7 @@
     <div class="row">
       <% @product.images.each do |image| %>
         <div class="col-xs-4">
-          <img src="#" class="img-responsive img-thumbnail" alt="<%= image.name %>" /><br>
+          <%= image_tag image.image_url.to_s, class: "img-responsive img-thumbnail", alt: image.name %>
           <%= link_to 'Edit', edit_image_path(image) %> |
           <%= link_to 'Remove', image, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
