@@ -17,6 +17,9 @@
     <%= f.label :image, 'Upload images:' %>
     <%= f.file_field :image, multiple: true, name: "image[image]" %>
   <% end %>
+  <div id="progress">
+    <div class="bar" style="width: 0%;"></div>
+  </div>
 <p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
