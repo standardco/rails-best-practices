@@ -60,4 +60,5 @@ end
 gem 'devise', '~> 3.4.1'
 
 gem "carrierwave"
+gem "mini_magick"
 gem "jquery-fileupload-rails"
