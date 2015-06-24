@@ -16,7 +16,11 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= image_tag(@image.image.thumb.url) if @image.image? %>
+  </div>
+  <div class="field">
     <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
   </div>
   <div class="actions">
     <%= f.submit %>
