@@ -2,9 +2,15 @@ $(function() {
   $('#new_image').fileupload({
     dataType: "script",
     add: function(e, data) {
-      data.context = $(tmpl("template-upload", data.files[0]));
-      $('#new_image').append(data.context);
-      data.submit();
+      types = /(\.|\/)(gif|jpe?g|png)$/i;
+      file = data.files[0];
+      if (types.test(file.type) || types.test(file.name)) {
+        data.context = $(tmpl("template-upload", file));
+        $('#new_image').append(data.context);
+        data.submit();
+      } else {
+        alert(file.name + " is not a gif, jpeg, or png image file");
+      }
     },
     progress: function(e, data) {
       if (data.context) {
