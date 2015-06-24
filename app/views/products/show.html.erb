@@ -6,7 +6,6 @@
 </p>
 <p>
   <strong>Images:</strong>
-  <div class="container">
     <div class="row">
       <% @product.images.each do |image| %>
         <div class="col-xs-4">
@@ -16,7 +15,6 @@
         </div>
       <% end %>
     </div>
-  </div>
   <%= link_to 'Add Image', new_product_image_path(@product) %>
 <p>
 
