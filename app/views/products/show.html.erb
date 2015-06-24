@@ -4,6 +4,21 @@
   <strong>Name:</strong>
   <%= @product.name %>
 </p>
+<p>
+  <strong>Images:</strong>
+  <div class="container">
+    <div class="row">
+      <% @product.images.each do |image| %>
+        <div class="col-xs-4">
+          <img src="#" class="img-responsive img-thumbnail" alt="<%= image.name %>" /><br>
+          <%= link_to 'Edit', edit_image_path(image) %> |
+          <%= link_to 'Remove', image, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <%= link_to 'Add Image', new_product_image_path(@product) %>
+<p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
