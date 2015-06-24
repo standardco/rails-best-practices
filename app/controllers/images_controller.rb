@@ -25,17 +25,7 @@ class ImagesController < ApplicationController
   # POST /images
   # POST /images.json
   def create
-    @image = @product.images.new(image_params)
-
-    respond_to do |format|
-      if @image.save
-        format.html { redirect_to @image.product, notice: 'Image was successfully created.' }
-        format.json { render :show, status: :created, location: @image }
-      else
-        format.html { render :new }
-        format.json { render json: @image.errors, status: :unprocessable_entity }
-      end
-    end
+    @image = @product.images.create(image_params)
   end
 
   # PATCH/PUT /images/1
