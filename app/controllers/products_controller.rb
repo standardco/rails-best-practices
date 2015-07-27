@@ -1,5 +1,18 @@
 class ProductsController < ApplicationController
+  include ActionController::Live
+  
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  
+  def stream_products
+    response.headers['Content-Type'] = 'text/event-stream'
+    Product.find_in_batches(start: 1, batch_size: 1) do |group|
+      group.each do |product|
+        response.stream.write product.name
+        sleep 1
+      end
+    end
+    response.stream.close
+  end
 
   # GET /products
   # GET /products.json

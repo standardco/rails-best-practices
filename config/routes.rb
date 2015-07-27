@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   get 'messaging', to: 'messaging#stream_message'
   
+  get 'stream_products', to: 'products#stream_products'
   resources :products do
     resources :images, shallow: true
   end
