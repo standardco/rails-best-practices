@@ -63,6 +63,10 @@ GEM
       slop (~> 3.6)
     celluloid (0.16.0)
       timers (~> 4.0.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.7)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -126,6 +130,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
+    mimemagic (0.3.0)
     mini_magick (4.2.7)
     mini_portile (0.6.2)
     minitest (5.5.1)
@@ -136,6 +141,12 @@ GEM
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
+    paperclip (4.3.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (= 0.3.0)
     pg (0.18.1)
     puma (2.11.0)
       rack (>= 1.1, < 2.0)
@@ -239,6 +250,7 @@ DEPENDENCIES
   jquery-fileupload-rails
   jquery-rails
   mini_magick
+  paperclip (~> 4.3.0)
   pg
   puma (~> 2.11.0)
   rails (= 4.2.0)

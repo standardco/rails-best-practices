@@ -63,3 +63,6 @@ gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 gem "mini_magick"
 gem "jquery-fileupload-rails"
 gem "fog-aws"
+
+# Use Paperclip for attaching files to ActiveRecord objects
+gem 'paperclip', '~> 4.3.0'
