@@ -1,0 +1,1 @@
+Paperclip.options[:command_path] = ENV['PAPERCLIP_COMMAND_PATH']
