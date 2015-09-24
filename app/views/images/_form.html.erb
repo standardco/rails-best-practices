@@ -16,7 +16,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= image_tag(@image.image.thumb.url) if @image.image? %>
+    <%= image_tag(@image.image.url(:thumb)) if @image.image? %>
   </div>
   <div class="field">
     <%= f.file_field :image %>
