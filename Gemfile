@@ -66,3 +66,5 @@ gem "fog-aws"
 
 # Use Paperclip for attaching files to ActiveRecord objects
 gem 'paperclip', '~> 4.3.0'
+
+gem 'aws-sdk', '~> 1.66.0'
