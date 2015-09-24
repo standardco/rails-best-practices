@@ -59,12 +59,11 @@ end
 # Use devise for user authentication
 gem 'devise', '~> 3.4.1'
 
-gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
-gem "mini_magick"
+# For asynchronous file upload
 gem "jquery-fileupload-rails"
-gem "fog-aws"
 
 # Use Paperclip for attaching files to ActiveRecord objects
 gem 'paperclip', '~> 4.3.0'
 
+# For uploading files to S3
 gem 'aws-sdk', '~> 1.66.0'
