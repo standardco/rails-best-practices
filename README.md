@@ -27,7 +27,7 @@ Here are the instructions for getting Rails Best Practices running on your compu
 		# Run postgres server now
 		$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 		
-5. Install [redis](http://redis.io/), which required by [Sidekiq](http://sidekiq.org/). Sidekiq is the library used for background processing. Sidekiq is defined in the `Procfile`, and is enabled by default. After installing redis using [homebrew](http://brew.sh/), follow the instructions in the terminal for loading redis automatically when starting your computer, and for launching redis immediately.
+5. Install [redis](http://redis.io/), which is required by [Sidekiq](http://sidekiq.org/). Sidekiq is the library used for background processing. It is defined in the `Procfile`, and is enabled by default. After installing redis using [homebrew](http://brew.sh/), follow the instructions in the terminal for loading redis automatically when starting your computer, and for launching redis immediately.
 
 		$ brew install redis
 		
@@ -45,7 +45,7 @@ If everything goes well, you should be able to use the fully-functional Rails Be
 
 ## Out-of-the-box Functionality
 
-Some of these functionalities are inherited from Rails Starter Kit, and some built as demonstrations for Rails Best Practices. **Product** and **Image** models are used to demo some of the features.
+Some of these functionalities are inherited from Rails Starter Kit, and some are demonstrations that are specific to Rails Best Practices. **Product** and **Image** models are used to demo some of the features.
 
 - Bootstrap with SASS
 - Procfile and 12factor gem for Heroku compatibility
