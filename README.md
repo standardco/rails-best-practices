@@ -31,13 +31,15 @@ Here are the instructions for getting Rails Best Practices running on your compu
 
 		$ brew install redis
 		
-6. Install gems and create the database. This should be familiar if you've ever developed with Rails.
+6. Update the database configuration in `config/database.yml`
+
+7. Install gems and create the database. This should be familiar if you've ever developed with Rails.
 
 		$ bundle install
 		$ rake db:create
 		$ rake db:migrate
 		
-7. Start the website using **foreman**. Unlike running `rails server`, foreman will actually look at your Procfile, and run all processes defined there. Running a website locally using foreman is very similar to how it will be run on Heroku, and it's the reason we recommend using it. Foreman will take the `.env` file you've already created, and load up the variables into your environment automatically.
+8. Start the website using **foreman**. Unlike running `rails server`, foreman will actually look at your Procfile, and run all processes defined there. Running a website locally using foreman is very similar to how it will be run on Heroku, and it's the reason we recommend using it. Foreman will take the `.env` file you've already created, and load up the variables into your environment automatically.
 
 		$ foreman start
 		
