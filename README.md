@@ -31,15 +31,19 @@ Here are the instructions for getting Rails Best Practices running on your compu
 
 		$ brew install redis
 		
-6. Update the database configuration in `config/database.yml`
+6. Install [ImageMagick](http://imagemagick.org/script/index.php) by following the instructions on the [Paperclip](https://github.com/thoughtbot/paperclip#image-processor) repo. Paperclip uses ImageMagick to resize and process images before upload.
 
-7. Install gems and create the database. This should be familiar if you've ever developed with Rails.
+7. Update the database configuration in `config/database.yml`
+
+8. Update the mailer host in `config/environments/development.rb` and `config/environments/production.rb`
+
+9. Install gems and create the database. This should be familiar if you've ever developed with Rails.
 
 		$ bundle install
 		$ rake db:create
 		$ rake db:migrate
 		
-8. Start the website using **foreman**. Unlike running `rails server`, foreman will actually look at your Procfile, and run all processes defined there. Running a website locally using foreman is very similar to how it will be run on Heroku, and it's the reason we recommend using it. Foreman will take the `.env` file you've already created, and load up the variables into your environment automatically.
+10. Start the website using **foreman**. Unlike running `rails server`, foreman will actually look at your Procfile, and run all processes defined there. Running a website locally using foreman is very similar to how it will be run on Heroku, and it's the reason we recommend using it. Foreman will take the `.env` file you've already created, and load up the variables into your environment automatically.
 
 		$ foreman start
 		
