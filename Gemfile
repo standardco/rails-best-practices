@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 ruby '2.2.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+# Explicity setting rake version to fix bundle install problem
+gem 'rake', '11.1.2'
 # Use puma server
 gem 'puma', '~> 2.14.0'
 # Use sidekiq for workers
